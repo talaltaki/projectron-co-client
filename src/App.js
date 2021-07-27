@@ -6,14 +6,16 @@ import PageNotFound from "./components/PageNotFound/PageNotFound";
 function App() {
   return (
     <Router>
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route path="*">
-          <PageNotFound />
-        </Route>
-      </Switch>
+      <div className="font-poppins">
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="*">
+            <PageNotFound />
+          </Route>
+        </Switch>
+      </div>
     </Router>
   );
 }

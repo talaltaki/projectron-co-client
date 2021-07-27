@@ -5,7 +5,7 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg navbar-light bg-transparent font-poppins">
       <div className="container">
         <a className="navbar-brand fw-bold fs-3" href="/">
-          projectron.<span style={{ color: "#536DFE" }}>co</span>
+          projectron.<span className="main-text">co</span>
         </a>
         <button
           className="navbar-toggler"
@@ -47,10 +47,7 @@ const Navbar = () => {
             </li>
           </ul>
           <span className="navbar-text">
-            <button
-              className="btn btn-sm text-white px-4"
-              style={{ backgroundColor: "#536DFE" }}
-            >
+            <button className="btn main-btn btn-sm text-white px-4">
               Login
             </button>
           </span>

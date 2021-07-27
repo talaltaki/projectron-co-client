@@ -5,3 +5,12 @@
 .font-poppins {
   font-family: "Poppins", sans-serif;
 }
+
+.main-text {
+  color: #536dfe;
+}
+
+.main-btn {
+  background-color: #536dfe;
+  color: #fff;
+}
