@@ -4,9 +4,9 @@ const HeaderMain = () => {
   return (
     <section className="container mt-5">
       <div className="d-flex">
-        <div className="col-md-6">
+        <div className="col-md-5">
           <div className="font-cursive fs-1 fw-bold main-text">Welcome</div>
-          <div className="fs-1 fw-bold">
+          <div className="fs-2 fw-bold">
             Creative solutions to improve your business!
           </div>
           <p className="text-secondary mt-3">
@@ -17,7 +17,7 @@ const HeaderMain = () => {
             Get Started
           </button>
         </div>
-        <div className="col-md-6">
+        <div className="col-md-7">
           <img
             src="https://i.ibb.co/YWjj36S/undraw-work-together-h63l.png"
             alt="Work Together"
