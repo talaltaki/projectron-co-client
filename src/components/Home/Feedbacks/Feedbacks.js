@@ -34,13 +34,13 @@ const feedbackData = [
 
 const Feedbacks = () => {
   return (
-    <section className="container mt-5">
+    <section className="container" style={{ marginTop: "100px" }}>
       <div className="text-center">
         <div className="font-cursive fs-1 fw-bold main-text">Feedback</div>
         <div className="fs-3 fw-bold">Clients' Appreciation</div>
       </div>
 
-      <div className="d-flex">
+      <div className="row">
         <div className="col-md-6">
           <img
             src="https://i.ibb.co/6w8kyns/undraw-reviews-lp8w.png"
@@ -48,13 +48,13 @@ const Feedbacks = () => {
             className="img-fluid mt-5"
           />
         </div>
-        <div className="col-md-6">
+        <div className="col-md-6 col-12">
           <div className="fs-1 main-text text-center mt-3 mb-2">
             <FaQuoteLeft />
           </div>
           <div className="row">
             {feedbackData.map((feedback) => (
-              <div className="col-md-6">
+              <div className="col-md-6 col-12">
                 <div className="card my-3 text-center border-0 shadow">
                   <div className="card-body">
                     <img

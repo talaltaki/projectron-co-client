@@ -23,15 +23,15 @@ const serviceData = [
 
 const Services = () => {
   return (
-    <section className="container mt-5">
+    <section className="container" style={{ marginTop: "100px" }}>
       <div className="text-center">
         <div className="fs-1 fw-bold font-cursive main-text">Try Out</div>
         <div className="fs-3 fw-bold">Our Services</div>
       </div>
 
-      <div className="d-flex">
+      <div className="row">
         {serviceData.map((service) => (
-          <div className="col-md-4">
+          <div className="col-md-4 col-12">
             <div className="card mx-2 mt-4 border-0 shadow">
               <div className="card-body py-5 px-4 text-center">
                 <img

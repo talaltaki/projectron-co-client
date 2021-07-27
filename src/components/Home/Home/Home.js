@@ -1,5 +1,6 @@
 import React from "react";
 import Feedbacks from "../Feedbacks/Feedbacks";
+import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import Projects from "../Projects/Projects";
 import Services from "../Services/Services";
@@ -13,6 +14,7 @@ const Home = () => {
       <Services />
       <Feedbacks />
       <Subscribe />
+      <Footer />
     </div>
   );
 };

@@ -29,7 +29,7 @@ const projectData = [
 
 const Projects = () => {
   return (
-    <section className="container mt-5">
+    <section className="container" style={{ marginTop: "100px" }}>
       <div className="text-center">
         <div className="font-cursive main-text fs-1 fw-bold">Glance</div>
         <div className="fs-3 fw-bold">Our Proven Process</div>
@@ -39,18 +39,18 @@ const Projects = () => {
         </p>
       </div>
 
-      <div className="d-flex">
-        <div className="col-md-7">
+      <div className="row">
+        <div className="col-md-7 col-12">
           <img
             src="https://i.ibb.co/RhqmjcN/undraw-project-team-lc5a.png"
             alt="Projects"
             className="img-fluid pt-5"
           />
         </div>
-        <div className="col-md-5">
+        <div className="col-md-5 col-12">
           <div className="row">
             {projectData.map((project) => (
-              <div className="col-md-6">
+              <div className="col-md-6 col-12">
                 <div
                   className="card project-card mt-4 py-4 text-center shadow"
                   style={{

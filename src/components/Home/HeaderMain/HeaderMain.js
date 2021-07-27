@@ -2,9 +2,9 @@ import React from "react";
 
 const HeaderMain = () => {
   return (
-    <section className="container mt-5">
-      <div className="d-flex">
-        <div className="col-md-5">
+    <section className="container" style={{ marginTop: "100px" }}>
+      <div className="row">
+        <div className="col-md-5 col-12">
           <div className="font-cursive fs-1 fw-bold main-text">Welcome</div>
           <div className="fs-2 fw-bold">
             Creative solutions to improve your business!
@@ -17,7 +17,7 @@ const HeaderMain = () => {
             Get Started
           </button>
         </div>
-        <div className="col-md-7">
+        <div className="col-md-7 col-12">
           <img
             src="https://i.ibb.co/YWjj36S/undraw-work-together-h63l.png"
             alt="Work Together"
