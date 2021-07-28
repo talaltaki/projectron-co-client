@@ -3,7 +3,7 @@ import { FiSend } from "react-icons/fi";
 
 const Subscribe = () => {
   return (
-    <section className="container" style={{ marginTop: "100px" }}>
+    <section id="contact" className="container" style={{ marginTop: "100px" }}>
       <div className="text-center">
         <div className="font-cursive main-text fs-1 fw-bold">Subscribe</div>
         <div className="fs-3 fw-bold">

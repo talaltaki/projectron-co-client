@@ -2,7 +2,7 @@ import React from "react";
 
 const HeaderMain = () => {
   return (
-    <section className="container" style={{ marginTop: "100px" }}>
+    <section className="container" style={{ marginTop: "120px" }}>
       <div className="row">
         <div className="col-md-5 col-12">
           <div className="font-cursive fs-1 fw-bold main-text">Welcome</div>

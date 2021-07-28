@@ -7,6 +7,8 @@ import Services from "../Services/Services";
 import Subscribe from "../Subscribe/Subscribe";
 
 const Home = () => {
+  document.title = "projectron.co";
+
   return (
     <div>
       <Header />

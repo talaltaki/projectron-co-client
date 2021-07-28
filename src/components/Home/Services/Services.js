@@ -23,7 +23,7 @@ const serviceData = [
 
 const Services = () => {
   return (
-    <section className="container" style={{ marginTop: "100px" }}>
+    <section id="services" className="container" style={{ marginTop: "100px" }}>
       <div className="text-center">
         <div className="fs-1 fw-bold font-cursive main-text">Try Out</div>
         <div className="fs-3 fw-bold">Our Services</div>

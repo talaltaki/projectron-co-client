@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <section className="container footer-margin-top mb-3">
       <div className="text-center">
-        <div className="fs-1 fw-bold">
+        <div className="font-logo fs-1">
           projectron<span className="main-text">.co</span>
         </div>
 

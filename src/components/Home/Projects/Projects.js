@@ -28,7 +28,7 @@ const projectData = [
 
 const Projects = () => {
   return (
-    <section className="container" style={{ marginTop: "100px" }}>
+    <section id="projects" className="container" style={{ marginTop: "100px" }}>
       <div className="text-center">
         <div className="font-cursive main-text fs-1 fw-bold">Glance</div>
         <div className="fs-3 fw-bold">Our Proven Process</div>

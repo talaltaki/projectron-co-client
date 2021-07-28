@@ -34,7 +34,11 @@ const feedbackData = [
 
 const Feedbacks = () => {
   return (
-    <section className="container" style={{ marginTop: "100px" }}>
+    <section
+      id="testimonials"
+      className="container"
+      style={{ marginTop: "100px" }}
+    >
       <div className="text-center">
         <div className="font-cursive fs-1 fw-bold main-text">Feedback</div>
         <div className="fs-3 fw-bold">Clients' Appreciation</div>
