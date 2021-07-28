@@ -2,7 +2,6 @@ import React from "react";
 import { HiOutlineDesktopComputer } from "react-icons/hi";
 import { MdOpenInBrowser } from "react-icons/md";
 import { AiOutlineFileDone, AiOutlineCalendar } from "react-icons/ai";
-import "./Projects.css";
 
 const projectData = [
   {
@@ -57,6 +56,7 @@ const Projects = () => {
                     borderLeft: "none",
                     borderTop: "none",
                     borderRight: "none",
+                    borderBottom: "5px solid #536dfe",
                   }}
                 >
                   <div className="card-body">
