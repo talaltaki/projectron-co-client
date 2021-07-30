@@ -8,9 +8,9 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-white font-poppins sticky-top">
       <div className="container">
-        <a className="navbar-brand font-logo fs-3" href="/">
+        <Link className="navbar-brand font-logo fs-3" to="/">
           projectron<span className="main-text">.co</span>
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -23,36 +23,29 @@ const Navbar = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarText">
-          <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              <a className="nav-link text-dark me-3" href="/">
-                Home
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link text-dark me-3" href="#projects">
-                Projects
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link text-dark me-3" href="#services">
-                Services
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link text-dark me-3" href="#testimonials">
-                Testimonials
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link text-dark" href="#contact">
-                Contact
-              </a>
-            </li>
-          </ul>
+          <div className="navbar-nav mx-auto mb-2 mb-lg-0">
+            <Link className="nav-link text-dark me-3 mt-2" to="/">
+              Home
+            </Link>
+            <a className="nav-link text-dark me-3 mt-2" href="#projects">
+              Projects
+            </a>
+            <a className="nav-link text-dark me-3 mt-2" href="#services">
+              Services
+            </a>
+            <a className="nav-link text-dark me-3 mt-2" href="#testimonials">
+              Testimonials
+            </a>
+            <a className="nav-link text-dark mt-2" href="#contact">
+              Contact
+            </a>
+          </div>
           <span className="navbar-text">
             {loggedInUser.name ? (
-              <button className="btn fw-bold border-0 shadow">
+              <button
+                className="btn fw-bold border-0 shadow"
+                style={{ pointerEvents: "none" }}
+              >
                 Hi, <span className="main-text">{loggedInUser.name}</span>
               </button>
             ) : (

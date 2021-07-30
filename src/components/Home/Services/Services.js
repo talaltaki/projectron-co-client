@@ -1,4 +1,5 @@
 import React from "react";
+import ServiceCard from "./ServiceCard/ServiceCard";
 
 const serviceData = [
   {
@@ -31,22 +32,7 @@ const Services = () => {
 
       <div className="row">
         {serviceData.map((service) => (
-          <div className="col-md-4 col-12">
-            <div className="card mx-2 mt-4 border-0 shadow">
-              <div className="card-body py-5 px-4 text-center">
-                <img
-                  src={service.image}
-                  alt=""
-                  className="img-fluid"
-                  style={{ width: "50px" }}
-                />
-                <div className="fs-6 mt-3">{service.title}</div>
-                <div className="mt-2 text-secondary">
-                  <small>{service.description}</small>
-                </div>
-              </div>
-            </div>
-          </div>
+          <ServiceCard key={service.title} service={service} />
         ))}
       </div>
     </section>
