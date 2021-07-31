@@ -1,28 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ServiceCard from "./ServiceCard/ServiceCard";
 
-const serviceData = [
-  {
-    image: "https://i.ibb.co/9NHLG3D/marketing.png",
-    title: "Digital Marketing",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, voluptate Lorem ipsum dolor sit amet consectetur",
-  },
-  {
-    image: "https://i.ibb.co/BZzrFt3/branding.png",
-    title: "Logo & Branding",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, voluptate Lorem ipsum dolor sit amet consectetur",
-  },
-  {
-    image: "https://i.ibb.co/5FNbhX4/solution.png",
-    title: "Custom Web Solution",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, voluptate Lorem ipsum dolor sit amet consectetur",
-  },
-];
-
 const Services = () => {
+  const [services, setServices] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:8080/services")
+      .then((res) => res.json())
+      .then((data) => setServices(data));
+  }, []);
+
   return (
     <section id="services" className="container" style={{ marginTop: "100px" }}>
       <div className="text-center">
@@ -31,8 +18,8 @@ const Services = () => {
       </div>
 
       <div className="row">
-        {serviceData.map((service) => (
-          <ServiceCard key={service.title} service={service} />
+        {services.map((service) => (
+          <ServiceCard key={service._id} service={service} />
         ))}
       </div>
     </section>
