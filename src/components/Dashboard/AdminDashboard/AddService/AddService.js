@@ -41,7 +41,7 @@ const AddService = () => {
           </label>
           <input
             type="text"
-            className="form-control rounded-0 border-0 border-bottom border-secondary mt-1 bg-transparent"
+            className="form-control rounded-0 border-secondary mt-1 bg-transparent"
             {...register("title", { required: true })}
           />
         </div>
@@ -51,7 +51,7 @@ const AddService = () => {
           </label>
           <input
             type="text"
-            className="form-control rounded-0 border-0 border-bottom border-secondary mt-1 bg-transparent"
+            className="form-control rounded-0 border-secondary mt-1 bg-transparent"
             {...register("description", { required: true })}
           />
         </div>
@@ -61,14 +61,14 @@ const AddService = () => {
           </label>
           <input
             type="text"
-            className="form-control rounded-0 border-0 border-bottom border-secondary mt-1 bg-transparent"
+            className="form-control rounded-0 border-secondary mt-1 bg-transparent"
             {...register("price", { required: true })}
           />
         </div>
         <div className="d-grid gap-2">
           <button
             type="submit"
-            className="btn main-btn rounded-3 mt-3 text-white"
+            className="btn main-btn rounded-0 mt-3 text-white"
           >
             Add New Service
           </button>
