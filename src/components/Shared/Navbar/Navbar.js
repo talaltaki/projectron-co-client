@@ -1,9 +1,20 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { UserContext } from "../../../App";
 
 const Navbar = () => {
   const [loggedInUser] = useContext(UserContext);
+  const [isAdmin, setIsAdmin] = useState(false);
+
+  useEffect(() => {
+    fetch("http://localhost:8080/admin", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email: loggedInUser.email }),
+    })
+      .then((response) => response.json())
+      .then((data) => setIsAdmin(data));
+  }, []);
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-white font-poppins sticky-top">
@@ -42,12 +53,31 @@ const Navbar = () => {
           </div>
           <span className="navbar-text">
             {loggedInUser.name ? (
-              <button
-                className="btn fw-bold border-0 shadow"
-                style={{ pointerEvents: "none" }}
-              >
-                Hi, <span className="main-text">{loggedInUser.name}</span>
-              </button>
+              <div>
+                <div
+                  className="fw-bold border-0"
+                  style={{ pointerEvents: "none" }}
+                >
+                  Hi, <span className="main-text">{loggedInUser.name}</span>
+                </div>
+                {!isAdmin ? (
+                  <div>
+                    <Link to="/order-list" className="text-decoration-none">
+                      <div className="main-text text-center border border-primary">
+                        Orders
+                      </div>
+                    </Link>
+                  </div>
+                ) : (
+                  <div>
+                    <Link to="/order-list" className="text-decoration-none">
+                      <div className="main-text text-center border border-primary">
+                        Dashboard
+                      </div>
+                    </Link>
+                  </div>
+                )}
+              </div>
             ) : (
               <Link to="/login">
                 <button className="btn main-btn btn-sm text-white px-4">

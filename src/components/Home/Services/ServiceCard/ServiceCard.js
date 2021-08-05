@@ -5,7 +5,10 @@ import "./ServiceCard.css";
 const ServiceCard = ({ service }) => {
   return (
     <div className="col-md-4 col-12">
-      <Link to="/dashboard" className="text-decoration-none text-dark">
+      <Link
+        to={`/order/${service._id}`}
+        className="text-decoration-none text-dark"
+      >
         <div className="card service-card mx-2 mt-4 border-0 shadow">
           <div className="card-body py-5 px-4 text-center">
             <img

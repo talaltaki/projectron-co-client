@@ -10,7 +10,7 @@ import { useHistory, useLocation } from "react-router-dom";
 const Login = () => {
   document.title = "Login to continue";
 
-  const [setLoggedInUser] = useContext(UserContext);
+  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
   const history = useHistory();
   const location = useLocation();
   const { from } = location.state || { from: { pathname: "/" } };
@@ -25,8 +25,8 @@ const Login = () => {
       .auth()
       .signInWithPopup(provider)
       .then(function (result) {
-        const { displayName, email } = result.user;
-        const signedInUser = { name: displayName, email };
+        const { displayName, email, photoURL } = result.user;
+        const signedInUser = { name: displayName, email, photo: photoURL };
         setLoggedInUser(signedInUser);
         storeAuthToken();
       })
