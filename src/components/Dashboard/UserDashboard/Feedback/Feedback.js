@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { useHistory } from "react-router-dom";
 import { UserContext } from "../../../../App";
@@ -7,10 +7,8 @@ import DashboardNavbar from "../../DashboardNavbar/DashboardNavbar";
 const Feedback = () => {
   document.title = "Leave your valuable feedback";
 
-  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+  const [loggedInUser] = useContext(UserContext);
   const history = useHistory();
-  const [feedbacks, setFeedbacks] = useState([]);
-  const [feedback, setFeedback] = useState({});
 
   const { register, handleSubmit } = useForm();
   const onSubmit = (data, event) => {

@@ -42,9 +42,9 @@ function App() {
               <Feedback />
             </PrivateRoute>
 
-            <Route path="/add-service">
+            <PrivateRoute path="/add-service">
               <AddService />
-            </Route>
+            </PrivateRoute>
 
             <Route path="/make-admin">
               <MakeAdmin />
