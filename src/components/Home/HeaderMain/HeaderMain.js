@@ -15,7 +15,7 @@ const HeaderMain = () => {
             measures for the corporate and personnel
           </p>
           <Link to="/login">
-            <button className="btn main-btn mt-3 px-4 text-white rounded-3">
+            <button className="btn main-btn mt-3 px-4 text-white rounded-0">
               Get Started
             </button>
           </Link>

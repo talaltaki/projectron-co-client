@@ -6,14 +6,14 @@ import DashboardNavbar from "../../DashboardNavbar/DashboardNavbar";
 const Order = () => {
   document.title = "Place your order";
 
-  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+  const [loggedInUser] = useContext(UserContext);
   const history = useHistory();
-  const [services, setServices] = useState([]);
+  const [setServices] = useState([]);
   const [service, setService] = useState({});
   const { id } = useParams();
 
   useEffect(() => {
-    fetch("http://localhost:8080/services")
+    fetch("https://morning-reef-93942.herokuapp.com/services")
       .then((response) => response.json())
       .then((data) => {
         setServices(data);
@@ -31,7 +31,7 @@ const Order = () => {
       status: "Pending",
     };
 
-    fetch("http://localhost:8080/place-order", {
+    fetch("https://morning-reef-93942.herokuapp.com/place-order", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newOrder),

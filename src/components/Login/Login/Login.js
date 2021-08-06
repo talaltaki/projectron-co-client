@@ -10,7 +10,7 @@ import { useHistory, useLocation } from "react-router-dom";
 const Login = () => {
   document.title = "Login to continue";
 
-  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+  const [setLoggedInUser] = useContext(UserContext);
   const history = useHistory();
   const location = useLocation();
   const { from } = location.state || { from: { pathname: "/" } };

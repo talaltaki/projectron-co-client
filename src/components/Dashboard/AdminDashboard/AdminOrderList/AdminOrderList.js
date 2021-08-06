@@ -8,7 +8,7 @@ const AdminOrderList = () => {
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8080/all-orders")
+    fetch("https://morning-reef-93942.herokuapp.com/all-orders")
       .then((response) => response.json())
       .then((data) => setOrders(data));
   }, []);
@@ -24,6 +24,17 @@ const AdminOrderList = () => {
 
       <div className="container">
         <div className="row">
+          {orders.length === 0 && (
+            <div class="text-center">
+              <div
+                className="spinner-grow mt-5 main-text"
+                style={{ width: "5rem", height: "5rem" }}
+                role="status"
+              >
+                <span class="visually-hidden">Loading...</span>
+              </div>
+            </div>
+          )}
           {orders.map((order) => (
             <AdminOrderCard key={order._id} order={order} />
           ))}

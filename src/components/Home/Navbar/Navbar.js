@@ -1,13 +1,14 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { UserContext } from "../../../App";
+import firebase from "firebase/app";
 
 const Navbar = () => {
-  const [loggedInUser] = useContext(UserContext);
+  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
   const [isAdmin, setIsAdmin] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:8080/admin", {
+    fetch("https://morning-reef-93942.herokuapp.com/admin", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email: loggedInUser.email }),
@@ -15,6 +16,23 @@ const Navbar = () => {
       .then((response) => response.json())
       .then((data) => setIsAdmin(data));
   }, []);
+
+  const handleGoogleSignOut = () => {
+    firebase
+      .auth()
+      .signOut()
+      .then(() => {
+        const signedOutUser = {
+          name: "",
+          email: "",
+          photo: "",
+        };
+        setLoggedInUser(signedOutUser);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-white font-poppins sticky-top">
@@ -55,7 +73,7 @@ const Navbar = () => {
             {loggedInUser.name ? (
               <div>
                 <div
-                  className="fw-bold border-0"
+                  className="fw-bold border-0 text-center"
                   style={{ pointerEvents: "none" }}
                 >
                   Hi, <span className="main-text">{loggedInUser.name}</span>
@@ -77,10 +95,16 @@ const Navbar = () => {
                     </Link>
                   </div>
                 )}
+                <button
+                  onClick={handleGoogleSignOut}
+                  className="btn main-btn btn-sm text-white mx-auto d-block px-5 mt-1 rounded-0"
+                >
+                  Sign Out
+                </button>
               </div>
             ) : (
               <Link to="/login">
-                <button className="btn main-btn btn-sm text-white px-4">
+                <button className="btn main-btn btn-sm text-white px-4 rounded-0">
                   Login
                 </button>
               </Link>

@@ -46,13 +46,13 @@ function App() {
               <AddService />
             </PrivateRoute>
 
-            <Route path="/make-admin">
+            <PrivateRoute path="/make-admin">
               <MakeAdmin />
-            </Route>
+            </PrivateRoute>
 
-            <Route path="/manage-services">
+            <PrivateRoute path="/manage-services">
               <ManageServices />
-            </Route>
+            </PrivateRoute>
 
             <Route path="*">
               <PageNotFound />

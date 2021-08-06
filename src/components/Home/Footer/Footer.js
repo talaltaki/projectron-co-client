@@ -21,7 +21,7 @@ const Footer = () => {
         <div className="mt-5 text-secondary">
           <small>Made with 💙 by Talal Taki</small>
         </div>
-        <a href="#top">
+        <a href="#top" className="text-decoration-none">
           <div className="d-grid gap-2">
             <button className="btn main-btn text-white mt-5">
               Go to Top <MdArrowUpward className="mb-1" />

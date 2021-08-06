@@ -2,7 +2,7 @@ import React from "react";
 
 const AdminOrderCard = ({ order }) => {
   const changeStatus = (e) => {
-    fetch("http://localhost:8080/update-status", {
+    fetch("https://morning-reef-93942.herokuapp.com/update-status", {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

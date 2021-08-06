@@ -6,11 +6,14 @@ import UserOrderCard from "./UserOrderCard/UserOrderCard";
 const UserOrderList = () => {
   document.title = "Orders you placed";
 
-  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+  const [loggedInUser] = useContext(UserContext);
   const [placedOrders, setPlacedOrders] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8080/orders?email=" + loggedInUser.email)
+    fetch(
+      "https://morning-reef-93942.herokuapp.com/orders?email=" +
+        loggedInUser.email
+    )
       .then((response) => response.json())
       .then((result) => setPlacedOrders(result));
   }, []);
@@ -27,6 +30,17 @@ const UserOrderList = () => {
 
       <div className="container">
         <div className="row">
+          {placedOrders.length === 0 && (
+            <div class="text-center">
+              <div
+                className="spinner-grow mt-5 main-text"
+                style={{ width: "5rem", height: "5rem" }}
+                role="status"
+              >
+                <span class="visually-hidden">Loading...</span>
+              </div>
+            </div>
+          )}
           {placedOrders.map((placedOrder) => (
             <UserOrderCard key={placedOrder._id} placedOrder={placedOrder} />
           ))}

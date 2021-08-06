@@ -15,7 +15,7 @@ const DashboardNavbar = () => {
   const [isAdmin, setIsAdmin] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:8080/admin", {
+    fetch("https://morning-reef-93942.herokuapp.com/admin", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email: loggedInUser.email }),
@@ -83,7 +83,7 @@ const DashboardNavbar = () => {
               >
                 <button className="btn btn-outline-secondary border-0">
                   <AiOutlineAppstore className="mb-1 me-1" />
-                  Manage Services
+                  Manage
                 </button>
               </Link>
             </div>

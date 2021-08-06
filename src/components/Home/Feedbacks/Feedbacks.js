@@ -6,7 +6,7 @@ const Feedbacks = () => {
   const [feedbacks, setFeedbacks] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8080/feedbacks")
+    fetch("https://morning-reef-93942.herokuapp.com/feedbacks")
       .then((res) => res.json())
       .then((data) => setFeedbacks(data));
   }, []);
@@ -25,6 +25,17 @@ const Feedbacks = () => {
         <FaQuoteLeft />
       </div>
       <div className="row">
+        {feedbacks.length === 0 && (
+          <div class="text-center">
+            <div
+              className="spinner-grow mt-5 main-text"
+              style={{ width: "5rem", height: "5rem" }}
+              role="status"
+            >
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>
+        )}
         {feedbacks.map((feedback) => (
           <div className="col-md-3 col-12">
             <FeedbackCard key={feedback._id} feedback={feedback} />

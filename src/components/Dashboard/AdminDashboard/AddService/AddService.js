@@ -10,7 +10,7 @@ const AddService = () => {
 
   const { register, handleSubmit } = useForm();
   const onSubmit = (data, event) => {
-    fetch("http://localhost:8080/add-service", {
+    fetch("https://morning-reef-93942.herokuapp.com/add-service", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),

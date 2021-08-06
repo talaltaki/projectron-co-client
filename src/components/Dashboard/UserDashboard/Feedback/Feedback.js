@@ -12,7 +12,7 @@ const Feedback = () => {
 
   const { register, handleSubmit } = useForm();
   const onSubmit = (data, event) => {
-    fetch("http://localhost:8080/add-feedback", {
+    fetch("https://morning-reef-93942.herokuapp.com/add-feedback", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),

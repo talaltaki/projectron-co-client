@@ -5,7 +5,7 @@ const Services = () => {
   const [services, setServices] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8080/services")
+    fetch("https://morning-reef-93942.herokuapp.com/services")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);
@@ -18,6 +18,17 @@ const Services = () => {
       </div>
 
       <div className="row">
+        {services.length === 0 && (
+          <div class="text-center">
+            <div
+              className="spinner-grow mt-5 main-text"
+              style={{ width: "5rem", height: "5rem" }}
+              role="status"
+            >
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>
+        )}
         {services.map((service) => (
           <ServiceCard key={service._id} service={service} />
         ))}

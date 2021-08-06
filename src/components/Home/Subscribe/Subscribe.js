@@ -22,7 +22,7 @@ const Subscribe = () => {
               placeholder="Your email here"
               className="form-control border-0 rounded-pill"
             />
-            <button className="btn main-btn btn-lg px-5 rounded-pill">
+            <button className="btn main-btn btn-lg px-5 rounded-pill text-white">
               <FiSend className="fs-3" />
             </button>
           </div>
