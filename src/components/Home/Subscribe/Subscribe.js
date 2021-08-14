@@ -5,21 +5,21 @@ const Subscribe = () => {
   return (
     <section id="contact" className="container" style={{ marginTop: "100px" }}>
       <div className="text-center">
-        <div className="font-cursive main-text fs-1 fw-bold">Subscribe</div>
+        <div className="font-cursive main-text fs-1 fw-bold">Contact</div>
         <div className="fs-3 fw-bold">
-          Always Stay With Us To Get <br /> All The Updates
+          Contact with us and <br /> Let us work with You!
         </div>
-        <p className="mt-2 text-secondary">
+        {/* <p className="mt-2 text-secondary">
           Join our mailing list to never miss another update
-        </p>
+        </p> */}
       </div>
 
-      <div className="card w-50 rounded-pill mx-auto border-0 shadow-lg mt-5">
+      <div className="card w-75 rounded-pill mx-auto border-0 shadow-lg mt-5">
         <div className="card-body">
           <div className="d-flex">
             <input
               type="text"
-              placeholder="Your email here"
+              placeholder="Your message here"
               className="form-control border-0 rounded-pill"
             />
             <button className="btn main-btn btn-lg px-5 rounded-pill text-white">

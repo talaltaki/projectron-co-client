@@ -28,7 +28,7 @@ const UserOrderList = () => {
         <hr className="w-25 mx-auto" />
       </div>
 
-      <div className="container">
+      <div className="container mb-5">
         <div className="row">
           {placedOrders.length === 0 && (
             <div class="text-center">

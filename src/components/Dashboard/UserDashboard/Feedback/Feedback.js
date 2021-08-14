@@ -37,7 +37,7 @@ const Feedback = () => {
         <hr className="w-25 mx-auto" />
       </div>
 
-      <form onSubmit={handleSubmit(onSubmit)} className="container w-25">
+      <form onSubmit={handleSubmit(onSubmit)} className="container w-auto">
         <div className="mt-3">
           <label>
             <small className="main-text">Your Name / Your Company Name</small>

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const HeaderMain = () => {
   return (
-    <section className="container" style={{ marginTop: "120px" }}>
+    <section className="container" style={{ marginTop: "20px" }}>
       <div className="row">
         <div className="col-md-5 col-12">
           <div className="font-cursive fs-1 fw-bold main-text">Welcome</div>
@@ -15,7 +15,7 @@ const HeaderMain = () => {
             measures for the corporate and personnel
           </p>
           <Link to="/login">
-            <button className="btn main-btn mt-3 px-4 text-white rounded-0">
+            <button className="btn main-btn mt-3 px-4 text-white rounded-1">
               Get Started
             </button>
           </Link>

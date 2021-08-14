@@ -34,7 +34,7 @@ const AddService = () => {
         <hr className="w-25 mx-auto" />
       </div>
 
-      <form onSubmit={handleSubmit(onSubmit)} className="container w-25 mt-5">
+      <form onSubmit={handleSubmit(onSubmit)} className="container w-auto mt-5">
         <div className="mt-3">
           <label>
             <small className="main-text">Title</small>

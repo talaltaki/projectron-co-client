@@ -8,7 +8,7 @@ const Order = () => {
 
   const [loggedInUser] = useContext(UserContext);
   const history = useHistory();
-  const [setServices] = useState([]);
+  const [services, setServices] = useState([]);
   const [service, setService] = useState({});
   const { id } = useParams();
 
@@ -56,7 +56,7 @@ const Order = () => {
         <hr className="w-25 mx-auto" />
       </div>
 
-      <form className="container w-25 mt-5">
+      <form className="container w-auto w-25 mt-5">
         <div className="mt-3">
           <label>
             <small className="main-text">Your Name / Your Company Name</small>
