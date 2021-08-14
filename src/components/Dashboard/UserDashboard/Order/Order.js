@@ -41,7 +41,7 @@ const Order = () => {
         if (done) {
           alert("Your Order has been placed successfully!");
         }
-        history.replace("/order-list-user");
+        history.replace("/order-list");
       });
     event.preventDefault();
   };
