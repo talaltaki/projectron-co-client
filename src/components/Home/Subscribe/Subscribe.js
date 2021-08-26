@@ -14,19 +14,19 @@ const Subscribe = () => {
         </p> */}
       </div>
 
-      <div className="card w-75 rounded-pill mx-auto border-0 shadow-lg mt-5">
+      <div className="card w-50 rounded-0 mx-auto border-0 shadow-lg mt-5">
         <div className="card-body">
-          <div className="d-flex">
+          <div>
             <input
               type="text"
               placeholder="Your message here"
-              className="form-control border-0 rounded-pill"
+              className="form-control border-0 rounded-0 text-center"
             />
-            <button className="btn main-btn btn-lg px-5 rounded-pill text-white">
-              <FiSend className="fs-3" />
-            </button>
           </div>
         </div>
+        <button className="btn main-btn btn-lg px-5 rounded-0 text-white">
+          <FiSend className="fs-3" />
+        </button>
       </div>
     </section>
   );

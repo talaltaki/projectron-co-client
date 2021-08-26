@@ -1,9 +1,28 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { UserContext } from "../../../App";
 
 const HeaderMain = () => {
+  const [loggedInUser] = useContext(UserContext);
+
   return (
     <section className="container" style={{ marginTop: "20px" }}>
+      {loggedInUser.name && (
+        <div
+          class="alert alert-primary alert-dismissible fade show"
+          role="alert"
+        >
+          <p>
+            Hello, <strong>{loggedInUser.name}</strong>!
+          </p>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="alert"
+            aria-label="Close"
+          ></button>
+        </div>
+      )}
       <div className="row">
         <div className="col-md-5 col-12">
           <div className="font-cursive fs-1 fw-bold main-text">Welcome</div>
