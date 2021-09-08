@@ -1,6 +1,7 @@
 import React from "react";
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { MdArrowUpward } from "react-icons/md";
+import { Link } from "react-router-dom";
 import "./Footer.css";
 
 const Footer = () => {
@@ -12,19 +13,24 @@ const Footer = () => {
         </div>
 
         <div className="mt-3">
-          <FaFacebook className="ms-4 fs-4 social-link" />
-          <FaTwitter className="mx-4 fs-4 social-link" />
-          <FaLinkedin className="fs-4 social-link" />
-          <FaInstagram className="mx-4 fs-4 social-link" />
+          <a href="https://www.facebook.com" className="text-dark">
+            <FaFacebook className="ms-4 fs-4 social-link" />
+          </a>
+          <a href="https://www.twitter.com" className="text-dark">
+            <FaTwitter className="mx-4 fs-4 social-link" />
+          </a>
+          <a href="https://linkedin.com/" className="text-dark">
+            <FaLinkedin className="fs-4 social-link" />
+          </a>
+          <a href="https://instagram.com/" className="text-dark">
+            <FaInstagram className="mx-4 fs-4 social-link" />
+          </a>
         </div>
 
-        <div className="mt-5 text-secondary">
-          <small>Made with 💙 by Talal Taki</small>
-        </div>
         <a href="#top" className="text-decoration-none">
-          <div className="d-grid gap-2">
-            <button className="btn main-btn text-white mt-5">
-              Go to Top <MdArrowUpward className="mb-1" />
+          <div className="">
+            <button className="btn main-btn text-white rounded-circle mt-5">
+              <MdArrowUpward className="mb-1" />
             </button>
           </div>
         </a>

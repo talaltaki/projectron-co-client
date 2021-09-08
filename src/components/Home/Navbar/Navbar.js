@@ -35,9 +35,9 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-white font-poppins sticky-top">
+    <nav className="navbar navbar-expand-lg navbar-light bg-white font-poppins fixed-top">
       <div className="container">
-        <Link className="navbar-brand font-logo fs-3" to="/">
+        <Link className="navbar-brand font-logo fs-1 fw-bold" to="/">
           projectron<span className="main-text">.co</span>
         </Link>
         <button
